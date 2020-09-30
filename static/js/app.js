@@ -94,8 +94,8 @@ function getPlots(id) {
     var layoutGauge = { 
         width: 600, 
         height: 500, 
-        margin: { t: 500, b: 500 } };
-    Plotly.newPlot('myDiv', dataGauge, layoutGauge);
+        margin: { t: 0, b: 0 } };
+    Plotly.newPlot('gauge', dataGauge, layoutGauge);
 }
 
 
