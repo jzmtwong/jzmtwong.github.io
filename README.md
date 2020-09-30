@@ -7,8 +7,8 @@ linked to github pages for presentation.
 - [x] Bar graph with labels 
 - [x] Bubble Plot with labels
 - [x] Panel with Metadata
-- [ ] Gauge bar
+- [x] Gauge bar
 
 **Website Preview**
 
-please check out the website that hosts this homework: [Button Biodiversity Page](jzmtwong.github.io)
+Please check out the website that hosts this homework: [Button Biodiversity Page](jzmtwong.github.io)
