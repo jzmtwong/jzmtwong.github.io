@@ -1,3 +1,4 @@
+//create plot function when id select
 function getPlots(id) {
     //read samples.json using d3
         d3.json("../../data/samples.json").then (sampledata =>{
@@ -80,4 +81,36 @@ function getPlots(id) {
     
     });
 }
-//status check
+
+//
+//create data retrival function
+function getBellyInfo(id) {
+    //read sample.json for data
+    d3.json("../../data/samples.json").then((data)=> {
+
+    })
+    //will continue
+}
+
+// function for initial data 
+function initData() {
+
+    // select dropdown menu 
+    var dropdown = d3.select("#selDataset");
+
+    // read the data 
+    d3.json("samples.json").then((data)=> {
+        console.log(data)
+
+        // get the id data to the dropdwown menu
+        data.names.forEach(function(name) {
+            dropdown.append("option").text(name).property("value");
+        });
+
+        // call the functions to display the data and the plots to the page
+        getPlots(data.names[0]);
+        getDemoInfo(data.names[0]);
+    });
+};
+//check point
+initData();
