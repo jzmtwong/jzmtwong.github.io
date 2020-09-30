@@ -47,7 +47,7 @@ function getPlots(id) {
             r: 100,
             t: 100,
             //
-            b: 100
+            b: 30
         }
     };
     // create bar plot
@@ -68,9 +68,9 @@ function getPlots(id) {
     // set layout for the bubble plot
     var layoutBubble = {
         xaxis:{title: "OTU ID"},
-        //
+
         height: 600,
-        width: 500
+        width: 1000
     };
 
     // creating data1 variable with corresponding data
@@ -82,15 +82,29 @@ function getPlots(id) {
     });
 }
 
-//
-//create data retrival function
+
+//create data retrival function for demographic info - metadata
 function getBellyInfo(id) {
     //read sample.json for data
     d3.json("static/js/samples.json").then((data)=> {
+// store metadata in variable
+        var metadata = data.metadata;
+        console.log(metadata)
 
+// filter metadata by id
+        var filtered = metadata.filter(meta => meta.id.toString() === id)[0];
+// select dempgrahic info to put in demographic panel
+        var panelInfo = d3.select('#sample-metadata')
+
+// clear demographic panel before getting new id input
+        panelInfo.html("");
+
+//retrieve info and append to panel, case unsensitize output
+        Object.entries(filtered).forEach((key) => {   
+            panelInfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
+        });
     })
-    //will continue
-}
+};
 
 // create the function for the change event optionChanged in the index.html
 function optionChanged(id) {
@@ -115,7 +129,7 @@ function initData() {
 
         // call the functions to display the data and the plots to the page
         getPlots(data.names[0]);
-        getDemoInfo(data.names[0]);
+        getBellyInfo(data.names[0]);
     });
 };
 //check point
