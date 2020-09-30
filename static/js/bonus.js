@@ -1,17 +1,18 @@
 //bonus
 //create gauge
-var dataGauge = [
+var data = [
     {
         domain: { x: [0, 1], y: [0, 1] },
         value: 270,
-        title: { text: "Belly Button Washing Frequency Per Week" },
+        title: { text: "Belly Button Washing Frequency <br> Scrubs per Week", font: {size: 18} },
         type: "indicator",
         mode: "gauge+number"
     }
 ];
 
-var layoutGauge = { 
+var layout = { 
     width: 600, 
     height: 500, 
-    margin: { t: 0, b: 0 } };
-Plotly.newPlot('gauge', dataGauge, layoutGauge);
+    margin: { t: 130, b: 0 } };
+
+Plotly.newPlot('gauge', data, layout);
