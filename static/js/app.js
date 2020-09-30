@@ -12,7 +12,7 @@ function getPlots(id) {
         var labels =  sampledata.samples[0].otu_labels.slice(0,10);
         console.log (labels);
 
-        // retrieve top 10 otu ids for the plot OTU. reverse order as well. 
+// retrieve top 10 otu ids for the plot OTU. reverse order as well. 
     var OTU_top = ( sampledata.samples[0].otu_ids.slice(0, 10)).reverse();
 
     // format OTU id's in chart
@@ -58,6 +58,7 @@ function getPlots(id) {
         y: sampledata.samples[0].sample_values,
         mode: "markers",
         marker: {
+//marker colors and sizes as specified
             size: sampledata.samples[0].sample_values,
             color: sampledata.samples[0].otu_ids
         },
