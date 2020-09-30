@@ -52,7 +52,7 @@ function getPlots(id) {
     };
     // create bar plot
     Plotly.newPlot("bar", data, layout);
-    // add bubble chart
+    // add bubble chart items
     var traceBelly = {
         x: sampledata.samples[0].otu_ids,
         y: sampledata.samples[0].sample_values,
@@ -84,7 +84,7 @@ function getPlots(id) {
 
 
 //create data retrival function for demographic info - metadata
-function getBellyInfo(id) {
+function getPanelInfo(id) {
     //read sample.json for data
     d3.json("static/js/samples.json").then((data)=> {
 // store metadata in variable
@@ -99,9 +99,9 @@ function getBellyInfo(id) {
 // clear demographic panel before getting new id input
         panelInfo.html("");
 
-//retrieve info and append to panel, case unsensitize output
+//retrieve info and append to panel,
         Object.entries(filtered).forEach((key) => {   
-            panelInfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
+            panelInfo.append("h5").text(key[0].toUpperCase() + ":  " + key[1] + "\n");    
         });
     })
 };
@@ -109,7 +109,7 @@ function getBellyInfo(id) {
 // create the function for the change event optionChanged in the index.html
 function optionChanged(id) {
     getPlots(id);
-    getBellyInfo(id);
+    getPanelInfo(id);
 }
 
 // function for initial data 
@@ -129,7 +129,7 @@ function initData() {
 
         // call the functions to display the data and the plots to the page
         getPlots(data.names[0]);
-        getBellyInfo(data.names[0]);
+        getPanelInfo(data.names[0]);
     });
 };
 //check point
