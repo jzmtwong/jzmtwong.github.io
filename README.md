@@ -8,6 +8,7 @@ linked to github pages for presentation.
 - [x] Bubble Plot with labels
 - [x] Panel with Metadata
 - [x] Gauge bar
+- [x] Website final check
 
 **Website Preview**
 
