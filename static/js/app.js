@@ -103,8 +103,8 @@ function getPanelInfo(id) {
             panelInfo.append("h5").text(key[0].toUpperCase() + ":  " + key[1] + "\n");    
         });
 //For the Bonus: use meta data to retrieve wfreq and generate gauge
-    getGauge(metadata.wfreq);
-    console.log(metadata.wfreq)
+    getGauge(filtered.wfreq);
+    console.log(filtered.wfreq)
     })
 };
 
