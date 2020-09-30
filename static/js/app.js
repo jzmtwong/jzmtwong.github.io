@@ -69,8 +69,8 @@ function getPlots(id) {
     var layoutBubble = {
         xaxis:{title: "OTU ID"},
 
-        height: 600,
-        width: 1000
+        height: 550,
+        width: 1100
     };
 
     // creating data1 variable with corresponding data
@@ -80,6 +80,22 @@ function getPlots(id) {
     Plotly.newPlot("bubble", dataBelly, layoutBubble); 
     
     });
+    //create gauge
+    var dataGauge = [
+        {
+            domain: { x: [0, 1], y: [0, 1] },
+            value: 270,
+            title: { text: "Speed" },
+            type: "indicator",
+            mode: "gauge+number"
+        }
+    ];
+    
+    var layoutGauge = { 
+        width: 600, 
+        height: 500, 
+        margin: { t: 500, b: 500 } };
+    Plotly.newPlot('myDiv', dataGauge, layoutGauge);
 }
 
 
