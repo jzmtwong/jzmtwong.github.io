@@ -12,4 +12,4 @@ linked to github pages for presentation.
 
 **Website Preview**
 
-Please check out the website that hosts this homework: [Button Biodiversity Page](jzmtwong.github.io)
+Please check out the website that hosts this homework: [Button Biodiversity Page](https://jzmtwong.github.io/)
