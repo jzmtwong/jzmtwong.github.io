@@ -25,4 +25,4 @@ Linked to github pages for presentation.
 
 # Website Preview
 
-Please check out the website that hosts this homework: [Button Biodiversity Page](https://jzmtwong.github.io/)
+Please check out the website that hosts this data visualization: [Button Biodiversity Page](https://jzmtwong.github.io/)
