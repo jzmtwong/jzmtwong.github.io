@@ -1,5 +1,7 @@
 # Belly Button Biodiversity
 
+![alt text](http://robdunnlab.com/wp-content/uploads/microbes-sem.jpg)
+
 Purpose:  Create a dashboard that explores a Belly Button biodiversity dataset with interesting data visualization graphics.
 
 Background: There is a diverse population of microbiota, or microscopic organisms, residing in a human's belly button. Until recently, this habitat has been relatively unexplored.  In addition to general scientific curiosity, studying microbiota can give us more information about the various roles microbes play in our daily lives.
