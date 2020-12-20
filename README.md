@@ -12,7 +12,7 @@ There is a diverse population of microbiota, or microscopic organisms, residing 
 
 **Additional Information**
 
-Used HTML and JAVAscript to code the dashboard.  
+Used HTML markup script and JAVAscript to create the dashboard.  
 Linked to github pages for presentation.
 
 **Tasks Completed**
